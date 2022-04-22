@@ -2,6 +2,7 @@ body{
     font-family: JetBrains Mono;
     font-weight: bolder;
     background-image : url("MkEnK8.jpg");
+    background-repeat: no-repeat;
     display: flex;
     align-items: right;
     justify-content: right;
@@ -10,7 +11,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 .container{
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     border-radius: 7px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     width: 400px;
@@ -76,3 +77,47 @@ h2{
     padding: 10px;
     border-radius: 5px;
 }
+
+
+/*ใหม่*/
+  
+
+  
+  .container {
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    animation: expand .8s ease forwards;
+    background-color: var(--secondary-color);
+    position: relative;
+    transition: all .8s ease;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(500px) scale(.2);
+    }
+    100% {
+      transform: translateX(0px) scale(1);
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes expand {
+    0% {
+      transform: translateX(1400px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }

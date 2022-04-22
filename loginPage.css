@@ -7,6 +7,7 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 .centerLogindiv {
+  font-family: Tahoma, Verdana, sans-serif;
     color: rgb(0, 0, 0);
     background: rgb(255, 255, 255);
     height: 60%;
@@ -21,6 +22,7 @@ body{
     overflow: auto;
 }
 .loginbutton {
+   font-family: Tahoma, Verdana, sans-serif;
     background-color: #4CAF50;
     position: absolute;
     border: none;
@@ -44,6 +46,7 @@ body{
 
   }
   input[type=text], input[type=password] {
+    font-family: Tahoma, Verdana, sans-serif;
     left: 5%;
     position: relative;
     width: 90%;
@@ -54,6 +57,7 @@ body{
     box-sizing: border-box;
   }
   label{
+    font-family: Tahoma, Verdana, sans-serif;
       font-size: 35px;
   }
   .col {
@@ -88,6 +92,7 @@ body{
       align-content: center;
   }
   .center {
+    font-family: Tahoma, Verdana, sans-serif;
     margin: 0;
     position: absolute;
     top: 50%;
@@ -96,6 +101,7 @@ body{
     transform: translate(-50%, -50%);
   }
   .registerbtn {
+    font-family: Tahoma, Verdana, sans-serif;
     background-color: #4CAF50;
     position: absolute;
     border: none;
@@ -115,11 +121,73 @@ body{
     width: 250px;
   }
   .or {
-    
+    font-family: Tahoma, Verdana, sans-serif;
     margin: 0;
     position: absolute;
     top: 77%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+
+
   }
+
+
+  /*ใหม่*/ /*จากเว็ปนี้ https://codepen.io/cassandraPaige/pen/MWYeqwZ */
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: -10;
+    background-color: var(--contrast-color);
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    animation: expand .8s ease forwards;
+    background-color: var(--secondary-color);
+    position: relative;
+    transition: all .8s ease;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(500px) scale(.2);
+    }
+    100% {
+      transform: translateX(0px) scale(1);
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes expand {
+    0% {
+      transform: translateX(1400px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  
