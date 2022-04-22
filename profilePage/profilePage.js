@@ -106,7 +106,7 @@ function Logout() {
 
   function editepfp(){
     Swal.fire({
-      title: 'Login Form',
+      title: 'Profile Form',
       html: `
       <input type="number" id="h" class="swal2-input" placeholder="Height(cm)">
       <input type="number" id="w" class="swal2-input" placeholder="Weight(kg)">
@@ -120,7 +120,7 @@ function Logout() {
 
 
       `,
-      confirmButtonText: 'Sign in',
+      confirmButtonText: 'Confirm',
       focusConfirm: false,
       preConfirm: () => {
         const weight = Swal.getPopup().querySelector('#w').value
