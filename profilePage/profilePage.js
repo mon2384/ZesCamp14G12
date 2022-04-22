@@ -37,7 +37,7 @@ document.getElementById('email').innerText =    "Email    : " + localStorage.get
 loadpfp()
 Swal.fire({
   icon: 'success',
-  title: `Welcome ${localStorage.getItem('Email')}`,
+  title: `Hi ${localStorage.getItem('Email')}`,
   text:`please wait 3 sec..`,
   showConfirmButton: false,
   timer: 3000,
