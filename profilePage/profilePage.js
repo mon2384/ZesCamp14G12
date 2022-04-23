@@ -336,10 +336,12 @@ function Difftotal(){
   document.getElementById('diffof2kcal').innerText = "kcalDiff: "+ caldiff +" kcal"
   }
 
-  if(caldiff > 0){
-    document.getElementById('adv').innerText = "คุณได้รับแคลรอรี่มากเกินไป"
+  if(caldiff > 400){
+    document.getElementById('adv').innerText = "คุณได้รับแคลอรี่มากเกินไป"
+  }else if(caldiff <= 400 && caldiff >= -400){
+    document.getElementById('adv').innerText = "คุณได้รับแคลลอรี่หมอะสมกับร่างกาย"
   }else{
-    document.getElementById('adv').innerText = "คุณได้รับแคลรอรี่น้อนเกินไป"
+    document.getElementById('adv').innerText = "คุณได้รับแคลอรี่น้อยเกินไป"
   }
 
 
