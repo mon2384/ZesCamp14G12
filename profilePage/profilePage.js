@@ -19,17 +19,34 @@ var storageRef = firebase.storage().ref();
 var bf,lun,din
 var allttcla = 0
 bf = localStorage.getItem('bfsit')
-document.getElementById('bfcalnow').innerText = "Kcal: "+ bf
 lun = localStorage.getItem('lunsit')
-document.getElementById('luncalnow').innerText = "Kcal: "+ lun
 din = localStorage.getItem('dinsit')
+
+function nullreset(){
+
+  if(bf == null){
+    document.getElementById('bfcalnow').innerText = "Kcal: "+ 0
+  }
+  if(lun == null){
+    document.getElementById('luncalnow').innerText = "Kcal: "+ 0
+  }
+  if(din == null){
+    document.getElementById('dincalnow').innerText = "Kcal: "+ 0
+  }
+}
+
+
+document.getElementById('bfcalnow').innerText = "Kcal: "+ bf
+document.getElementById('luncalnow').innerText = "Kcal: "+ lun
 document.getElementById('dincalnow').innerText = "Kcal: "+ din
 
 RetriveData()
 updatecal()
 Caltotal()
+
 Difftotal()
 rekcal()
+nullreset()
 
 function rekcal(){
   document.getElementById('bfcalnow').innerText = "Kcal: "+ bf
@@ -85,7 +102,7 @@ function Logout() {
     .then((result) => {
         if (result.isDismissed) {
           localStorage.setItem('bfsit', 0)
-            
+          
           localStorage.setItem('lunsit', 0)
 
           localStorage.setItem('dinsit', 0)
@@ -318,6 +335,14 @@ function Difftotal(){
 
   document.getElementById('diffof2kcal').innerText = "kcalDiff: "+ caldiff +" kcal"
   }
+
+  if(caldiff > 0){
+    document.getElementById('adv').innerText = "คุณได้รับแคลรอรี่มากเกินไป"
+  }else{
+    document.getElementById('adv').innerText = "คุณได้รับแคลรอรี่น้อนเกินไป"
+  }
+
+
 }
 
 
