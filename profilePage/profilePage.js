@@ -139,7 +139,7 @@ function Logout() {
       html: `
       <input type="number" id="h" class="swal2-input" placeholder="Height(cm)">
       <input type="number" id="w" class="swal2-input" placeholder="Weight(kg)">
-      <input type="humber" id="y" class="swal2-input" placeholder="Age(yrs)">
+      <input type="number" id="y" class="swal2-input" placeholder="Age(yrs)">
       <select id="g">
         <option value="male" >กรุณาเลือกเพศ(default:ชาย)</option>
         <option value="male" >ชาย </option>
