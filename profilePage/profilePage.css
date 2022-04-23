@@ -9,7 +9,7 @@ body {
 .divcenterbox {
   font-family: Tahoma, Verdana, sans-serif;
     color: rgb(0, 0, 0);
-    background: rgb(255, 255, 255);
+    background: #ffffff;
     height: 95%;
     width: 97.25%;
     margin: 0;
@@ -34,8 +34,8 @@ body {
 .divsideright{
   font-family: Tahoma, Verdana, sans-serif;
     position: absolute;
-    color: white;
-    background-color: rgb(154, 154, 154);
+    color: rgb(0, 0, 0);
+    background-color: #a6edff;
     height: 50%;
     width: 72.5%;
     right: 2.5%;
@@ -47,7 +47,7 @@ body {
 .editpfpdiv{
   font-family: Tahoma, Verdana, sans-serif;
     position: absolute;
-    background-color: rgb(116, 116, 116);
+    background-color: rgb(63, 211, 34);
     height: 7.5%;
     width: 20%;
     right: 1.25%;
@@ -70,7 +70,7 @@ body {
 .foodfoot{
   font-family: Tahoma, Verdana, sans-serif;
     position: absolute;
-    background-color: rgb(154, 154, 154);
+    background-color: #a6edff;
     height: 35%;
     width: 60%;
     left: 2.5%;
@@ -81,7 +81,7 @@ body {
 .caldivdiff{
   font-family: Tahoma, Verdana, sans-serif;
     position: absolute;
-    background-color: gray;
+    background-color: #a6edff;
     height: 35%;
     width: 32.5%;
     right: 2.5%;
@@ -96,7 +96,7 @@ body {
 .logoutbtn{
   font-family: Tahoma, Verdana, sans-serif;
         position: absolute;
-        background-color: rgb(116, 116, 116);
+        background-color: rgb(250, 24, 24);
         height: 7.5%;
         width: 20%;
         right: 1.25%;
@@ -107,10 +107,10 @@ body {
         cursor: pointer;
 }
 .logoutbtn:hover{
-    background-color: rgb(67, 67, 67);
+    background-color: rgb(165, 18, 18);
 }
 .editpfpdiv:hover{
-    background-color: rgb(67, 67, 67);
+    background-color: rgb(42, 136, 23);
 }
 .grid-container {
     display: grid;
@@ -140,7 +140,7 @@ position: absolute;
 .calperdaydiv{
   font-family: Tahoma, Verdana, sans-serif;
   position: absolute;
-  background-color: rgb(116, 116, 116);
+  background-color: rgb(230, 230, 34);
   height: 16%;
   width: 40%;
   left: 47%;
@@ -169,7 +169,7 @@ img.a {
 .uplpfp{
   font-family: Tahoma, Verdana, sans-serif;
   position: absolute;
-  background-color: rgb(116, 116, 116);
+  background-color: rgb(63, 211, 34);
   height: 7.5%;
   width: 20%;
   left: 2.5%;
@@ -180,13 +180,13 @@ img.a {
   cursor: pointer;
 }
 .uplpfp:hover{
-  background-color: rgb(67, 67, 67);
+  background-color: rgb(42, 136, 23);
 }
 
 .bfdiv {
   font-family: Tahoma, Verdana, sans-serif;
   position: absolute;
-  background-color: gray;
+  background-color: #d5f7ff;
   height: 90%;
   width: 30%;
   left: 1.5%;
@@ -196,7 +196,7 @@ img.a {
 .lundiv {
   font-family: Tahoma, Verdana, sans-serif;
   position: absolute;
-  background-color: gray;
+  background-color: #d5f7ff;
   height: 90%;
   width: 30%;
   left: 35%;
@@ -206,7 +206,7 @@ img.a {
 .dindiv {
   font-family: Tahoma, Verdana, sans-serif;
   position: absolute;
-  background-color: gray;
+  background-color: #d5f7ff;
   height: 90%;
   width: 30%;
   left: 68%;
@@ -216,7 +216,7 @@ img.a {
 .caltddiv {
   font-family: Tahoma, Verdana, sans-serif;
   position: absolute;
-  background-color: rgb(116, 116, 116);
+  background-color: #d5f7ff;
   height: 42.5%;
   width: 95%;
   right: 2.5%;
@@ -228,7 +228,7 @@ img.a {
 .caldifftd {
   font-family: Tahoma, Verdana, sans-serif;
   position: absolute;
-  background-color: rgb(116, 116, 116);
+  background-color: #d5f7ff;
   height: 42.5%;
   width: 95%;
   right: 2.5%;
@@ -245,12 +245,12 @@ img.a {
   bottom: 5%;
   left: 5%;
   position: absolute;
-  background-color: beige;
+  background-color: #8eeaff;
   color: black;
   border-radius: 25px;
   cursor: pointer;
 }
-.bfdivtext:hover{background-color: rgb(245, 245, 220, 0.5);}
+.bfdivtext:hover{background-color: #65a1ae;}
 .divtextinse{
   font-family: Tahoma, Verdana, sans-serif;
   position: absolute;
@@ -267,12 +267,12 @@ img.a {
   bottom: 5%;
   left: 5%;
   position: absolute;
-  background-color: beige;
+  background-color: #8eeaff;
   color: black;
   border-radius: 25px;
   cursor: pointer;
 }
-.lundivtext:hover{background-color: rgb(245, 245, 220, 0.5);}
+.lundivtext:hover{background-color: #65a1ae;}
 
 .dindivtext{
   font-family: Tahoma, Verdana, sans-serif;
@@ -281,12 +281,12 @@ img.a {
   bottom: 5%;
   left: 5%;
   position: absolute;
-  background-color: beige;
+  background-color: #8eeaff;
   color: black;
   border-radius: 25px;
   cursor: pointer;
 }
-.dindivtext:hover{background-color: rgb(245, 245, 220, 0.5);}
+.dindivtext:hover{background-color: #65a1ae;}
 
 .bfcalshow {
   font-family: Tahoma, Verdana, sans-serif;
