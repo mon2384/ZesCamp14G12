@@ -16,6 +16,10 @@ body{
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     width: 400px;
 }
+.cbgc{
+  background-color: beige;
+  
+}
 .form{
     padding: 30px 40px;
 }
@@ -88,9 +92,9 @@ h2{
     height: 100vh;
     justify-content: space-around;
     align-items: center;
-    color: #fff;
+    color: #777;
     animation: expand .8s ease forwards;
-    background-color: var(--secondary-color);
+    background-color: white;
     position: relative;
     transition: all .8s ease;
   }
