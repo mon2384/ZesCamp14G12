@@ -23,10 +23,13 @@ function FT(){
 }
 function FT2(){
   if(foodtimeselect == 1){
+    localStorage.setItem('foodtime2', 1)
     localStorage.setItem('bfsit', ttcalcal)
   }else if(foodtimeselect == 2){
+    localStorage.setItem('foodtime2', 2)
     localStorage.setItem('lunsit', ttcalcal)
   } else if(foodtimeselect == 3){
+    localStorage.setItem('foodtime2', 3)
     localStorage.setItem('dinsit', ttcalcal)
   }else{
     bflundin = "ERROR 404"

@@ -7,7 +7,7 @@ let bmr
 var email =localStorage.getItem('Email')
 var heig,weig,ageg,sex
 var tdeexbmr 
-var foodtimeselect = localStorage.getItem('foodTime')
+var foodtimeselect = localStorage.getItem('foodTime2')
 
 var floor
 var ttcaltopfp = localStorage.getItem('ttcaltopfp')
