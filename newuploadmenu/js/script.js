@@ -14,7 +14,7 @@ function FT(){
   if(foodtimeselect == 1){
     bflundin = "Breakfast"
   }else if(foodtimeselect == 2){
-    bflundin = "Lunck"
+    bflundin = "Lunch"
   } else if(foodtimeselect == 3){
     bflundin = "Dinner"
   }else{

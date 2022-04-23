@@ -19,18 +19,25 @@ var storageRef = firebase.storage().ref();
 var bf,lun,din
 var allttcla = 0
 bf = localStorage.getItem('bfsit')
+document.getElementById('bfcalnow').innerText = "Kcal: "+ bf
 lun = localStorage.getItem('lunsit')
+document.getElementById('luncalnow').innerText = "Kcal: "+ lun
 din = localStorage.getItem('dinsit')
-
+document.getElementById('dincalnow').innerText = "Kcal: "+ din
 
 RetriveData()
 updatecal()
 Caltotal()
 Difftotal()
+rekcal()
 
-document.getElementById('bfcalnow').innerText = "Kcal: "+ bf
-document.getElementById('luncalnow').innerText = "Kcal: "+ lun
-document.getElementById('dincalnow').innerText = "Kcal: "+ din
+function rekcal(){
+  document.getElementById('bfcalnow').innerText = "Kcal: "+ bf
+  document.getElementById('luncalnow').innerText = "Kcal: "+ lun
+  document.getElementById('dincalnow').innerText = "Kcal: "+ din
+}
+
+
 
 document.getElementById('username').innerText = "Username : " + localStorage.getItem('Username')
 document.getElementById('email').innerText =    "Email    : " + localStorage.getItem('Email')
@@ -77,6 +84,11 @@ function Logout() {
     })
     .then((result) => {
         if (result.isDismissed) {
+          localStorage.setItem('bfsit', 0)
+            
+          localStorage.setItem('lunsit', 0)
+
+          localStorage.setItem('dinsit', 0)
           openlg()
         }
       })

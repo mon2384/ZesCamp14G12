@@ -4,8 +4,8 @@ var user = auth.currentUser
 let loginButton = document.getElementById("lgbtn")
 
 
-function goreg(){
-    window.location.href = 'registerPage/Register.html'
+function goreg() {
+  window.location.href = 'registerPage/Register.html'
 }
 
 /*function REG() {
@@ -40,96 +40,102 @@ function goreg(){
       });
   }
   */
-  function Loginnow() {
+function Loginnow() {
 
-    var email = document.getElementById("emailField").value;
-    var pass = document.getElementById("passField").value;
-  
-    auth.signInWithEmailAndPassword(email, pass)
-      .then((userCredential) => {
-        user = userCredential.user
-        db.collection("EATRAIDEE").doc(email).get()
+  var email = document.getElementById("emailField").value;
+  var pass = document.getElementById("passField").value;
+
+  auth.signInWithEmailAndPassword(email, pass)
+
+    .then((userCredential) => {
+      user = userCredential.user
+      db.collection("EATRAIDEE").doc(email).get()
         .then(function (doc) {
-          if(doc.exists){
-              localStorage.setItem("Username", doc.data().Username)
-              
-              localStorage.setItem("Email", doc.data().Email)
-              
-              
+          if (doc.exists) {
+            localStorage.setItem("Username", doc.data().Username)
+            localStorage.setItem("Email", doc.data().Email)
+
+            localStorage.setItem('bfsit', 0)
+            
+            localStorage.setItem('lunsit', 0)
+
+            localStorage.setItem('dinsit', 0)
+
+
+
           }
-          else{
+          else {
             console.log("does not exist")
             alert("Successfully")
           }
-            }).catch((error) => {
-                console.log("Error getting document:", error)
-            })
-        
-  
-        console.log("Successfully Sign in");
-        Swal.fire({
-            icon: 'success',
-            title: `Welcome ${email}`,
-            text: `Havefun`,
-            text:`please wait 3 sec..`,
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true
-            
-            
-        }).then((result) => {
-          if (result.isDismissed) {
-            openrl()
-          }
+        }).catch((error) => {
+          console.log("Error getting document:", error)
         })
 
-        
-        
+
+      console.log("Successfully Sign in");
+      Swal.fire({
+        icon: 'success',
+        title: `Welcome ${email}`,
+        text: `Havefun`,
+        text: `please wait 3 sec..`,
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true
+
+
+      }).then((result) => {
+        if (result.isDismissed) {
+          openrl()
+        }
       })
-      .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log("error " + errorCode + " : " + errorMessage);
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: `Don't Have This User In Database OR Password is invalid`,})
-      });
-  
-  }
-  
-  function Logout() {
-  
-    auth.signOut() //<<< นี่คือคำสั่ง Logout
+
+
+
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log("error " + errorCode + " : " + errorMessage);
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: `Don't Have This User In Database OR Password is invalid`,
+      })
+    });
+
+}
+
+function Logout() {
+
+  auth.signOut() //<<< นี่คือคำสั่ง Logout
     .then(() => {
-        var email = document.getElementById("emailField").value;
+      var email = document.getElementById("emailField").value;
       console.log("Successfully Sign out");
 
       Swal.fire({
         icon: 'success',
         title: 'lol...',
-        text: `GOODBYE ${email}`,})
-        
-        
-  
+        text: `GOODBYE ${email}`,
+      })
+
+
+
     })
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
       console.log("error " + errorCode + " : " + errorMessage);
     });
-  }
-
-
-  function openrl(){
-
-    window.location.href = 'profilePage/profilePage.html'
-  }
-  function handleSubmit(username, uid){
-    localStorage.setItem("USERNAME", username)
-    localStorage.setItem("UID", uid)
-    return;
 }
-localStorage.setItem('bfsit', 0)
-localStorage.setItem('lunsit', 0)
-localStorage.setItem('dinsit', 0)
+
+
+function openrl() {
+
+  window.location.href = 'profilePage/profilePage.html'
+}
+function handleSubmit(username, uid) {
+  localStorage.setItem("USERNAME", username)
+  localStorage.setItem("UID", uid)
+  return;
+}
