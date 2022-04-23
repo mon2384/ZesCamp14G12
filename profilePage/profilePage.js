@@ -344,7 +344,7 @@ function Difftotal(){
     document.getElementById('adv').innerText = "คุณได้รับแคลอรี่น้อยเกินไป"
   }
 
-
+//chenge
 }
 
 
