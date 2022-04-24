@@ -38,7 +38,7 @@ function register() {
                   })
           
 
-                auth.signInWithEmailAndPassword(email, password)
+               
 
                 
                 console.log("Success")
